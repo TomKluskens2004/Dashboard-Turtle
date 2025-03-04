@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- Header -->
+<header >
+  <div class="imgcont">
+    <div class="left"> <img src="images/logo.png" class="logo">
+    <p class="anno"><b>ANNO</b><br><select id="menu">
+      <option>2023</option>
+      <option>2022</option>
+      <option>2021</option>
+      <option>2020</option>
+      <option>2019</option>
+  </select></p>
+    
+    </div>
+    <p id="LValueAnno" class="p20"></p>
+  <img src="images/vivace.png " class="vivace">
+ <p id="RValueAnno" class="p20"><b>16.950</b> <br> tP20/ANNO</p>
+  <div class="left">
+
+    <p class="db">DASHBOARD <br> AMBIENTALE</p>
+    <div class="left"> <img src="images/turtle.png" class="turtle">
+  </div>
+</div>
+</header>
+<!-- End Header -->
+    <div class="grid-container">
+
+      <!-- Main -->
+      <main class="main-container">
+      
+      
+        <div class="charts">
+
+          <!--Energia-->
+          <div class="charts-card ene">
+            
+            <div id="bar-chart"></div>
+            
+            <div class="grid ge">
+             
+             
+              <p><b>Ace<br>Energia</b></p>
+              <p id="aceenergia"></p>
+              <div style="width: 40%; align-self: center; " id="donut-chart3"></div>
+              <p>Efficienza<br>consumo<br> anno precedente</p>
+              <p>16%</p>
+             <p> <span id="solar" class="material-symbols-outlined">
+                solar_power
+                </span></p>
+              <p>Emissioni<br>tCO₂eq</p>
+              <p>246</p>
+              <p><span class="material-symbols-outlined">
+                cloud_upload
+                </span></p>
+                <p>Consumo<br>totale kWh</p>
+              <p>773k</p>
+              <p><span class="material-symbols-outlined">
+                local_fire_department
+                </span></p>
+            </div>
+              
+           
+          </div>
+          
+          <!--Rifiuti-->
+          <div class="charts-card rif">
+            <div id="bar-chart2"></div>
+            <div class="grid gr">
+              <p><b>Ace<br>Rifiuti</b></p>
+              <p id="acerifiuti"></p>
+              <div style="width: 60%; align-self: center; " id="donut-chart5"></div>
+             
+              <p>Consumo<br>totale kg</p>
+              <p>0k</p>
+              <p><span class="material-symbols-outlined uno">
+               delete
+                </span></p>
+              <p>Efficienza<br>consumo <br> anno precedente</p>
+              <p>-100%</p>
+             <p> <span class="material-symbols-outlined uno">
+              recycling
+              </span></p>
+              <p>Emissioni<br>tCO₂eq</p>
+              <p>0</p>
+              <p><span class="material-symbols-outlined uno">
+                cloud_upload
+                </span></p>
+            </div>
+
+            
+          </div>
+           
+          
+           <!--Acqua-->
+          <div class="charts-card acq">
+           
+            <div id="bar-chart3"></div>
+            <div  class="grid ga">
+              <p><b>Ace<br>Acqua</b></p>
+              <p id="aceacqua"></p>
+              <div style="width: 150%; align-self: center; " id="donut-chart6"></div>
+             
+              <p>Consumo<br>totale m3</p>
+              <p>1k</p>
+              <p><span class="material-symbols-outlined due">
+                faucet
+                </span></p>
+              <p>Efficienza<br>consumo anno<br> precedente</p>
+              <p>78%</p>
+             <p> <span id="solar" class="material-symbols-outlined due">
+                cycle
+                </span></p>
+              <p>Emissioni<br>tCO₂eq</p>
+              <p>1</p>
+              <p><span class="material-symbols-outlined due">
+                cloud_upload
+                </span></p>
+            </div>
+          </div>
+
+           <!--Trasporti-->
+          <div class="charts-card tra">
+            <div id="bar-chart4"></div>
+            <div class="grid gt">
+             
+              <p><b>Ace<br>Trasporti</b></p>
+              <p id="acetrasporti"></p>
+              <div style="width: 100%; align-self: center; " id="donut-chart4"></div>
+              <p>Consumo totale <br> l benzine eq</p>
+              <p>114k</p>
+              <p><span class="material-symbols-outlined tre">
+                local_gas_station
+                </span></p>
+              <p>Efficienza<br>consumo <br>anno precedente</p>
+              <p>-73%</p>
+             <p> <span id="solar" class="material-symbols-outlined tre">
+              battery_charging_full
+                </span></p>
+              <p>Emissioni<br>tCO₂eq</p>
+              <p>218</p>
+              <p><span class="material-symbols-outlined tre">
+                cloud_upload
+                </span></p>
+            </div>
+            
+            
+          </div>
+<!--Backgroundimg for donuts-->
+<img src="images/turtlesmall.png" class="donut3">
+<!--Outer donutgraph-->
+<div  class="donut" id="donut-chart"></div>
+<!--inner donutgraph-->
+<div  class="donut2" id="donut-chart2"></div>
+
+        </div>
+        
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
